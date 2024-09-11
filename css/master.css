@@ -606,12 +606,12 @@ margin-bottom: 40px;
     color: #777;
 }
 @media (max-width: 991px) {
-    .features .feat-box {
+    .features .container .feat-box {
         width: calc(100% / 2);
     }
 }
 @media (max-width: 575px) {
-    .features .feat-box {
+    .features .container .feat-box {
         width: 100%;
     }
 }
