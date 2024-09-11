@@ -41,6 +41,15 @@ document.querySelector(".toggle-settings .fa-gear").onclick = function () {
     this.classList.toggle("fa-spin");
     document.querySelector(".settings-box").classList.toggle("open");
 }
+//control the close of settings box
+document.addEventListener('click', (e) => {
+    let settingsBox = document.querySelector(".settings-box");
+    let toggleSettings = document.querySelector(".toggle-settings");
+    if (e.target !== toggleSettings && !settingsBox.contains(e.target)) {
+        settingsBox.classList.remove("open");
+        document.querySelector(".toggle-settings .fa-gear").classList.remove("fa-spin");
+    }
+});
 
 //switch colors
 const colorLis = document.querySelectorAll(".colors-list li");
